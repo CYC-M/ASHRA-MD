@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# Native build outputs
+core/build/
+*.dylib
+*.so
+*.o
+
+# Local/editor/runtime files
+.zcode/
+.DS_Store
+*.swp
+*.swo
+
+# Generated simulation outputs
+*.chk
+*.history.json
+*_report.json
