@@ -1,0 +1,19 @@
+{
+  "note": "EPT-Dock ΔG 标定数据集 v2（2026-11-06 扩充，n=14）。Kd 来源分级：measured=文献直接测量；family=文献家族典型值/区间几何均值（由分级拟合检验稳健性）。ΔG°=RT·lnKd, T=298K。",
+  "systems": [
+    {"pdb": "2BBM", "system": "CaM–smMLCK peptide", "kd_M": 2.5e-9, "quality": "measured", "kd_source": "Kennelly 1987 / FRET 综述 ~1-3 nM", "dg": -11.73},
+    {"pdb": "1CDL", "system": "CaM–smMLCK peptide (另一构建)", "kd_M": 1.5e-9, "quality": "measured", "kd_source": "CaM-MLCK 家族 ~1-2 nM (Kennelly 1987)", "dg": -12.04},
+    {"pdb": "1MXE", "system": "CaM–CaMKI 肽 (1-5-10 motif)", "kd_M": 1.0e-8, "quality": "family", "kd_source": "低 nM 区间 (Shifman & Mayo PNAS 2003)", "dg": -10.91},
+    {"pdb": "2F3Y", "system": "CaM–IQ motif 肽", "kd_M": 5.0e-7, "quality": "family", "kd_source": "IQ motif 0.1-10 μM (Andrews 2020 综述)", "dg": -8.59},
+    {"pdb": "2VAY", "system": "CaM–CaV1.1 IQ 肽", "kd_M": 5.0e-7, "quality": "family", "kd_source": "IQ motif 0.1-10 μM", "dg": -8.59},
+    {"pdb": "2FLU", "system": "Keap1 Kelch–Nrf2 ETGE 16mer", "kd_M": 2.4e-8, "quality": "measured", "kd_source": "Chen 2011 (PMC3218206) SPR 23.9 nM", "dg": -10.39},
+    {"pdb": "1YCR", "system": "MDM2–p53 15-29", "kd_M": 6.0e-7, "quality": "measured", "kd_source": "Kussie 1996 ITC ~600 nM", "dg": -8.48},
+    {"pdb": "1BXL", "system": "Bcl-xL–Bak BH3", "kd_M": 7.0e-7, "quality": "measured", "kd_source": "Sattler 1997 ~0.5-1 μM", "dg": -8.39},
+    {"pdb": "1BE9", "system": "PSD-95 PDZ3–CRIPT 肽", "kd_M": 2.0e-6, "quality": "measured", "kd_source": "Toto 2016 / Chi 2006, ~1-3 μM", "dg": -7.77},
+    {"pdb": "1N7F", "system": "GRIP1 PDZ6–liprin C 端肽", "kd_M": 1.0e-5, "quality": "family", "kd_source": "PDZ 典型 ~1-20 μM（量级估计）", "dg": -6.82},
+    {"pdb": "2I0L", "system": "Sap97 PDZ2–HPV18 E6 肽", "kd_M": 2.0e-5, "quality": "family", "kd_source": "PDZ-E6 ~10-40 μM（量级估计）", "dg": -6.41},
+    {"pdb": "1QJA", "system": "14-3-3 ζ–磷酸肽 (mode 2)", "kd_M": 3.0e-6, "quality": "family", "kd_source": "单磷酸化 motif 1-10 μM (Yaffe 1997)", "dg": -7.44},
+    {"pdb": "1JYR", "system": "Grb2 SH2–pY 肽", "kd_M": 1.0e-6, "quality": "family", "kd_source": "简单 pY 肽 1-10 μM (Ogura 2008)", "dg": -8.18},
+    {"pdb": "1G3F", "system": "XIAP BIR3–Smac AVPI", "kd_M": 5.0e-7, "quality": "measured", "kd_source": "Bolognesi 2009 / Sun 2007, 0.4-0.7 μM", "dg": -8.59}
+  ]
+}

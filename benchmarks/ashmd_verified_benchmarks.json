@@ -1,0 +1,1328 @@
+{
+  "algorithm": "ASHRA-MD",
+  "full_name": "Active-Shell Hamiltonian with Replica-tempering & Affinity functional Molecular Dynamics",
+  "engine_version": "2.0.0",
+  "generated_at_epoch": 1794043435.21,
+  "platform": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.12.15",
+    "simd_backend": "ARM64_NEON_128"
+  },
+  "physiological_baseline": {
+    "kelvin": 310.15,
+    "celsius": 37.0,
+    "ionic_strength_M": 0.15
+  },
+  "gradients": {
+    "active_shell_softcore_max_rel_err": 4.74e-06,
+    "explicit_pme_max_rel_err": 4.3e-07,
+    "ihrt_fast_cross_potentials_ash_max_abs_err_kt": 3.155946615152061e-10,
+    "ihrt_fast_cross_potentials_pme_max_abs_err_kt": 1.1368683772161603e-11,
+    "ihrt_fast_cross_potentials_1ycr_speedup_vs_16full": 123.69
+  },
+  "integrator_and_determinism": {
+    "nve_std_etot_over_ek": 0.000383,
+    "resonance_unfiltered_std_etot_kcal": 0.63992,
+    "resonance_fc_baoab_filtered_std_etot_kcal": 0.51923,
+    "cross_thread_1_vs_4_max_dx_a": 0.0,
+    "cross_thread_1_vs_4_max_dv": 0.0,
+    "checkpoint_resume_4rep_max_dx_a": 0.0,
+    "checkpoint_resume_4rep_max_df_mbar": 0.0
+  },
+  "protein_and_metalloenzymes": {
+    "crambin_1crn": {
+      "ash_atoms": 834,
+      "pme_atoms": 5985,
+      "ash_backbone_rmsd_mean_a": 0.5703,
+      "pme_backbone_rmsd_mean_a": 0.331,
+      "ash_vs_pme_final_ca_rmsd_a": 0.7061,
+      "ash_ns_per_day": 35.24,
+      "pme_ns_per_day": 4.67
+    },
+    "ca2_6hd2": {
+      "atoms": 4199,
+      "donors": [
+        {
+          "donor": "A:HIS94:NE2",
+          "initialA": 1.9975,
+          "meanA": 2.1825,
+          "stdA": 0.0477,
+          "minA": 2.1,
+          "maxA": 2.2848
+        },
+        {
+          "donor": "A:HIS96:NE2",
+          "initialA": 2.0097,
+          "meanA": 2.2104,
+          "stdA": 0.0682,
+          "minA": 2.1168,
+          "maxA": 2.3498
+        },
+        {
+          "donor": "A:HIS119:ND1",
+          "initialA": 1.9956,
+          "meanA": 2.2552,
+          "stdA": 0.0477,
+          "minA": 2.1848,
+          "maxA": 2.3164
+        }
+      ],
+      "fourth_site_catalytic_water_dist_a": 2.3098,
+      "ns_per_day": 4.17
+    },
+    "cpa1_1m4l": {
+      "atoms": 4874,
+      "restrained_donors": [
+        {
+          "donor": "A:HIS69:ND1",
+          "initialA": 2.0348,
+          "meanA": 2.2477,
+          "stdA": 0.0547,
+          "minA": 2.1395,
+          "maxA": 2.3085
+        },
+        {
+          "donor": "A:GLU72:OE1",
+          "initialA": 2.2697,
+          "meanA": 2.3506,
+          "stdA": 0.0764,
+          "minA": 2.1698,
+          "maxA": 2.4643
+        },
+        {
+          "donor": "A:GLU72:OE2",
+          "initialA": 2.246,
+          "meanA": 2.3097,
+          "stdA": 0.0561,
+          "minA": 2.1858,
+          "maxA": 2.3831
+        },
+        {
+          "donor": "A:HIS196:ND1",
+          "initialA": 2.0448,
+          "meanA": 2.1634,
+          "stdA": 0.0415,
+          "minA": 2.0985,
+          "maxA": 2.2251
+        }
+      ],
+      "unrestrained_ablation_donors": [
+        {
+          "donor": "A:HIS69:ND1",
+          "initialA": 2.0348,
+          "meanA": 3.3609,
+          "stdA": 0.5244,
+          "minA": 2.3136,
+          "maxA": 4.3429
+        },
+        {
+          "donor": "A:GLU72:OE1",
+          "initialA": 2.2697,
+          "meanA": 3.6452,
+          "stdA": 0.6286,
+          "minA": 2.4338,
+          "maxA": 4.73
+        },
+        {
+          "donor": "A:GLU72:OE2",
+          "initialA": 2.246,
+          "meanA": 2.6548,
+          "stdA": 0.8177,
+          "minA": 2.0039,
+          "maxA": 4.3321
+        },
+        {
+          "donor": "A:HIS196:ND1",
+          "initialA": 2.0448,
+          "meanA": 3.0801,
+          "stdA": 0.5966,
+          "minA": 2.2235,
+          "maxA": 4.3441
+        }
+      ],
+      "ns_per_day": 3.5
+    }
+  },
+  "criterion3_affinity_ranking": {
+    "coverage": "14/14",
+    "native_stable_bound_rate": 1.0,
+    "all_14": {
+      "n_complexes": 14,
+      "dg_pred_rmse_kcal": 2.3535,
+      "dg_pred_mae_kcal": 1.7621,
+      "dg_pred_pearson_r": 0.6432,
+      "dg_pred_spearman_rho": 0.6159,
+      "raw_mmgbsa_rmse_kcal": 78.9181,
+      "raw_mmgbsa_pearson_r": 0.6655,
+      "raw_mmgbsa_spearman_rho": 0.6512,
+      "ash_score_pearson_r": 0.6471,
+      "ash_score_spearman_rho": 0.6468
+    },
+    "measured_7": {
+      "n_complexes": 7,
+      "dg_pred_rmse_kcal": 2.2857,
+      "dg_pred_mae_kcal": 2.0046,
+      "dg_pred_pearson_r": 0.7489,
+      "dg_pred_spearman_rho": 0.5357,
+      "raw_mmgbsa_rmse_kcal": 69.3039,
+      "raw_mmgbsa_pearson_r": 0.8225,
+      "raw_mmgbsa_spearman_rho": 0.6071,
+      "ash_score_pearson_r": 0.8373,
+      "ash_score_spearman_rho": 0.6071
+    },
+    "complexes": [
+      {
+        "pdb": "2BBM",
+        "system": "CaM–smMLCK peptide",
+        "quality": "measured",
+        "kd_M": 2.5e-09,
+        "kd_source": "Kennelly 1987 / FRET 综述 ~1-3 nM",
+        "dg_exp_kcal": -11.73,
+        "dg_bind_pred_mean_kcal": -10.0488,
+        "error_pred_minus_exp_kcal": 1.6812,
+        "abs_error_kcal": 1.6812,
+        "atoms": 2848,
+        "retained_ions": 4,
+        "provenance_notes": [
+          "Applied crystallographic inner-sphere harmonic Ca2+/Mg2+ coordination restraints (k=65.0 kcal/mol/A^2) on 21 protein oxygen donor bonds."
+        ],
+        "ligand_rmsd_mean_a": 1.0775,
+        "q_native_mean": 0.761,
+        "hbond_count_mean": 2.75,
+        "neutral_hbond_count_mean": 2.0,
+        "buried_sasa_mean_a2": 3389.15,
+        "cav_sasa_mean_kcal": -24.4019,
+        "pol_eps4_mean_kcal": 16.6361,
+        "conf_entropy_mean_kcal": 12.7852,
+        "mmgbsa_vdw_mean_kcal": -112.9032,
+        "mmgbsa_elec_mean_kcal": -1466.3807,
+        "mmgbsa_gb_mean_kcal": 1510.3202,
+        "mmgbsa_np_mean_kcal": -35.0355,
+        "mmgbsa_dg_mean_kcal": -103.9992,
+        "ash_binding_score_kcal": -98.1371,
+        "mbar_funnel_dg_kcal": -323.7546,
+        "lambda_schedule": [
+          1.0,
+          0.93,
+          0.86,
+          0.78
+        ],
+        "swap_acceptance_rates": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "verdict": "stable_bound",
+        "aggregate_ns_per_day": 6.81
+      },
+      {
+        "pdb": "1CDL",
+        "system": "CaM–smMLCK peptide (另一构建)",
+        "quality": "measured",
+        "kd_M": 1.5e-09,
+        "kd_source": "CaM-MLCK 家族 ~1-2 nM (Kennelly 1987)",
+        "dg_exp_kcal": -12.04,
+        "dg_bind_pred_mean_kcal": -14.1994,
+        "error_pred_minus_exp_kcal": -2.1594,
+        "abs_error_kcal": 2.1594,
+        "atoms": 2645,
+        "retained_ions": 4,
+        "provenance_notes": [
+          "Reconstructed missing heavy atoms on A:THR5: ['CG2', 'OG1']",
+          "Reconstructed missing heavy atoms on A:GLN8: ['CD', 'CG', 'NE2', 'OE1']",
+          "Reconstructed missing heavy atoms on A:GLU14: ['CD', 'CG', 'OE1', 'OE2']",
+          "Reconstructed missing heavy atoms on A:LYS77: ['CB', 'CD', 'CE', 'CG', 'NZ']",
+          "Reconstructed missing heavy atoms on A:LYS115: ['CB', 'CD', 'CE', 'CG', 'NZ']",
+          "Reconstructed missing heavy atoms on A:GLU127: ['CD', 'CG', 'OE1', 'OE2']",
+          "Applied crystallographic inner-sphere harmonic Ca2+/Mg2+ coordination restraints (k=65.0 kcal/mol/A^2) on 24 protein oxygen donor bonds."
+        ],
+        "ligand_rmsd_mean_a": 0.774,
+        "q_native_mean": 0.8407,
+        "hbond_count_mean": 9.25,
+        "neutral_hbond_count_mean": 4.5,
+        "buried_sasa_mean_a2": 3156.38,
+        "cav_sasa_mean_kcal": -22.726,
+        "pol_eps4_mean_kcal": 12.584,
+        "conf_entropy_mean_kcal": 13.5198,
+        "mmgbsa_vdw_mean_kcal": -134.9754,
+        "mmgbsa_elec_mean_kcal": -1278.1165,
+        "mmgbsa_gb_mean_kcal": 1314.5817,
+        "mmgbsa_np_mean_kcal": -33.0547,
+        "mmgbsa_dg_mean_kcal": -131.565,
+        "ash_binding_score_kcal": -123.1696,
+        "mbar_funnel_dg_kcal": -475.8188,
+        "lambda_schedule": [
+          1.0,
+          0.9438,
+          0.8876,
+          0.8314
+        ],
+        "swap_acceptance_rates": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "verdict": "stable_bound",
+        "aggregate_ns_per_day": 5.56
+      },
+      {
+        "pdb": "1MXE",
+        "system": "CaM–CaMKI 肽 (1-5-10 motif)",
+        "quality": "family",
+        "kd_M": 1e-08,
+        "kd_source": "低 nM 区间 (Shifman & Mayo PNAS 2003)",
+        "dg_exp_kcal": -10.91,
+        "dg_bind_pred_mean_kcal": -16.9402,
+        "error_pred_minus_exp_kcal": -6.0302,
+        "abs_error_kcal": 6.0302,
+        "atoms": 2788,
+        "retained_ions": 4,
+        "provenance_notes": [
+          "Applied crystallographic inner-sphere harmonic Ca2+/Mg2+ coordination restraints (k=65.0 kcal/mol/A^2) on 24 protein oxygen donor bonds."
+        ],
+        "ligand_rmsd_mean_a": 0.8347,
+        "q_native_mean": 0.852,
+        "hbond_count_mean": 14.0,
+        "neutral_hbond_count_mean": 5.75,
+        "buried_sasa_mean_a2": 3587.23,
+        "cav_sasa_mean_kcal": -25.8281,
+        "pol_eps4_mean_kcal": 15.6129,
+        "conf_entropy_mean_kcal": 15.4815,
+        "mmgbsa_vdw_mean_kcal": -163.252,
+        "mmgbsa_elec_mean_kcal": -1401.5857,
+        "mmgbsa_gb_mean_kcal": 1444.1571,
+        "mmgbsa_np_mean_kcal": -40.9827,
+        "mmgbsa_dg_mean_kcal": -161.6632,
+        "ash_binding_score_kcal": -155.2704,
+        "mbar_funnel_dg_kcal": -435.6801,
+        "lambda_schedule": [
+          1.0,
+          0.93,
+          0.86,
+          0.78
+        ],
+        "swap_acceptance_rates": [
+          0.0,
+          0.5,
+          0.0
+        ],
+        "verdict": "stable_bound",
+        "aggregate_ns_per_day": 5.41
+      },
+      {
+        "pdb": "2F3Y",
+        "system": "CaM–IQ motif 肽",
+        "quality": "family",
+        "kd_M": 5e-07,
+        "kd_source": "IQ motif 0.1-10 μM (Andrews 2020 综述)",
+        "dg_exp_kcal": -8.59,
+        "dg_bind_pred_mean_kcal": -8.6611,
+        "error_pred_minus_exp_kcal": -0.0711,
+        "abs_error_kcal": 0.0711,
+        "atoms": 2743,
+        "retained_ions": 4,
+        "provenance_notes": [
+          "Stripped unchelated crystallization ion MG A:1176",
+          "Stripped unchelated crystallization ion MG A:1177",
+          "Applied crystallographic inner-sphere harmonic Ca2+/Mg2+ coordination restraints (k=65.0 kcal/mol/A^2) on 24 protein oxygen donor bonds."
+        ],
+        "ligand_rmsd_mean_a": 0.7076,
+        "q_native_mean": 0.9203,
+        "hbond_count_mean": 4.5,
+        "neutral_hbond_count_mean": 2.25,
+        "buried_sasa_mean_a2": 2717.85,
+        "cav_sasa_mean_kcal": -19.5685,
+        "pol_eps4_mean_kcal": 19.8781,
+        "conf_entropy_mean_kcal": 12.3936,
+        "mmgbsa_vdw_mean_kcal": -120.3481,
+        "mmgbsa_elec_mean_kcal": -802.5058,
+        "mmgbsa_gb_mean_kcal": 848.7408,
+        "mmgbsa_np_mean_kcal": -31.4526,
+        "mmgbsa_dg_mean_kcal": -105.5656,
+        "ash_binding_score_kcal": -104.1018,
+        "mbar_funnel_dg_kcal": -338.8141,
+        "lambda_schedule": [
+          1.0,
+          0.9381,
+          0.8761,
+          0.8142
+        ],
+        "swap_acceptance_rates": [
+          0.5,
+          0.0,
+          0.5
+        ],
+        "verdict": "stable_bound",
+        "aggregate_ns_per_day": 6.26
+      },
+      {
+        "pdb": "2VAY",
+        "system": "CaM–CaV1.1 IQ 肽",
+        "quality": "family",
+        "kd_M": 5e-07,
+        "kd_source": "IQ motif 0.1-10 μM",
+        "dg_exp_kcal": -8.59,
+        "dg_bind_pred_mean_kcal": -9.7568,
+        "error_pred_minus_exp_kcal": -1.1668,
+        "abs_error_kcal": 1.1668,
+        "atoms": 2781,
+        "retained_ions": 4,
+        "provenance_notes": [
+          "Stripped unchelated crystallization ion CL B:2543",
+          "Applied crystallographic inner-sphere harmonic Ca2+/Mg2+ coordination restraints (k=65.0 kcal/mol/A^2) on 24 protein oxygen donor bonds."
+        ],
+        "ligand_rmsd_mean_a": 0.7113,
+        "q_native_mean": 0.8833,
+        "hbond_count_mean": 6.0,
+        "neutral_hbond_count_mean": 1.25,
+        "buried_sasa_mean_a2": 2899.35,
+        "cav_sasa_mean_kcal": -20.8753,
+        "pol_eps4_mean_kcal": 19.6898,
+        "conf_entropy_mean_kcal": 13.9504,
+        "mmgbsa_vdw_mean_kcal": -133.1689,
+        "mmgbsa_elec_mean_kcal": -561.4864,
+        "mmgbsa_gb_mean_kcal": 608.2547,
+        "mmgbsa_np_mean_kcal": -32.6513,
+        "mmgbsa_dg_mean_kcal": -119.0519,
+        "ash_binding_score_kcal": -117.4098,
+        "mbar_funnel_dg_kcal": -417.4677,
+        "lambda_schedule": [
+          1.0,
+          0.9508,
+          0.9017,
+          0.8525
+        ],
+        "swap_acceptance_rates": [
+          0.0,
+          0.5,
+          0.5
+        ],
+        "verdict": "stable_bound",
+        "aggregate_ns_per_day": 5.71
+      },
+      {
+        "pdb": "2FLU",
+        "system": "Keap1 Kelch–Nrf2 ETGE 16mer",
+        "quality": "measured",
+        "kd_M": 2.4e-08,
+        "kd_source": "Chen 2011 (PMC3218206) SPR 23.9 nM",
+        "dg_exp_kcal": -10.39,
+        "dg_bind_pred_mean_kcal": -7.7692,
+        "error_pred_minus_exp_kcal": 2.6208,
+        "abs_error_kcal": 2.6208,
+        "atoms": 4677,
+        "retained_ions": 0,
+        "provenance_notes": [
+          "Reconstructed missing heavy atoms on X:GLU446: ['CD', 'CG', 'OE1', 'OE2']",
+          "Reconstructed missing heavy atoms on X:ARG447: ['CD', 'CG', 'CZ', 'NE', 'NH1', 'NH2']",
+          "Reconstructed missing heavy atoms on X:GLU493: ['CD', 'CG', 'OE1', 'OE2']",
+          "Reconstructed missing heavy atoms on X:GLN528: ['CD', 'CG', 'NE2', 'OE1']",
+          "Reconstructed missing heavy atoms on X:LYS551: ['CD', 'CE', 'CG', 'NZ']",
+          "Reconstructed missing heavy atoms on P:GLU78: ['CD', 'CG', 'OE1', 'OE2']"
+        ],
+        "ligand_rmsd_mean_a": 0.8016,
+        "q_native_mean": 0.9038,
+        "hbond_count_mean": 11.25,
+        "neutral_hbond_count_mean": 4.25,
+        "buried_sasa_mean_a2": 1176.0,
+        "cav_sasa_mean_kcal": -8.4672,
+        "pol_eps4_mean_kcal": 6.7759,
+        "conf_entropy_mean_kcal": 5.3136,
+        "mmgbsa_vdw_mean_kcal": -61.2689,
+        "mmgbsa_elec_mean_kcal": -100.515,
+        "mmgbsa_gb_mean_kcal": 118.4826,
+        "mmgbsa_np_mean_kcal": -13.9517,
+        "mmgbsa_dg_mean_kcal": -57.2529,
+        "ash_binding_score_kcal": -54.4219,
+        "mbar_funnel_dg_kcal": -291.2711,
+        "lambda_schedule": [
+          1.0,
+          0.9583,
+          0.9166,
+          0.8749
+        ],
+        "swap_acceptance_rates": [
+          0.5,
+          0.5,
+          1.0
+        ],
+        "verdict": "stable_bound",
+        "aggregate_ns_per_day": 2.67
+      },
+      {
+        "pdb": "1YCR",
+        "system": "MDM2–p53 15-29",
+        "quality": "measured",
+        "kd_M": 6e-07,
+        "kd_source": "Kussie 1996 ITC ~600 nM",
+        "dg_exp_kcal": -8.48,
+        "dg_bind_pred_mean_kcal": -8.2492,
+        "error_pred_minus_exp_kcal": 0.2308,
+        "abs_error_kcal": 0.2308,
+        "atoms": 1814,
+        "retained_ions": 0,
+        "provenance_notes": [],
+        "ligand_rmsd_mean_a": 0.7562,
+        "q_native_mean": 0.8386,
+        "hbond_count_mean": 3.25,
+        "neutral_hbond_count_mean": 2.0,
+        "buried_sasa_mean_a2": 1606.93,
+        "cav_sasa_mean_kcal": -11.5699,
+        "pol_eps4_mean_kcal": 9.9969,
+        "conf_entropy_mean_kcal": 5.4959,
+        "mmgbsa_vdw_mean_kcal": -77.4003,
+        "mmgbsa_elec_mean_kcal": -163.2898,
+        "mmgbsa_gb_mean_kcal": 185.6761,
+        "mmgbsa_np_mean_kcal": -18.893,
+        "mmgbsa_dg_mean_kcal": -73.907,
+        "ash_binding_score_kcal": -69.7087,
+        "mbar_funnel_dg_kcal": -167.8931,
+        "lambda_schedule": [
+          1.0,
+          0.93,
+          0.86,
+          0.78
+        ],
+        "swap_acceptance_rates": [
+          0.0,
+          0.5,
+          0.5
+        ],
+        "verdict": "stable_bound",
+        "aggregate_ns_per_day": 9.5
+      },
+      {
+        "pdb": "1BXL",
+        "system": "Bcl-xL–Bak BH3",
+        "quality": "measured",
+        "kd_M": 7e-07,
+        "kd_source": "Sattler 1997 ~0.5-1 μM",
+        "dg_exp_kcal": -8.39,
+        "dg_bind_pred_mean_kcal": -5.164,
+        "error_pred_minus_exp_kcal": 3.226,
+        "abs_error_kcal": 3.226,
+        "atoms": 3223,
+        "retained_ions": 0,
+        "provenance_notes": [],
+        "ligand_rmsd_mean_a": 0.9667,
+        "q_native_mean": 0.7272,
+        "hbond_count_mean": 2.25,
+        "neutral_hbond_count_mean": 0.0,
+        "buried_sasa_mean_a2": 1920.92,
+        "cav_sasa_mean_kcal": -13.8306,
+        "pol_eps4_mean_kcal": 15.5459,
+        "conf_entropy_mean_kcal": 6.872,
+        "mmgbsa_vdw_mean_kcal": -74.6428,
+        "mmgbsa_elec_mean_kcal": -74.5177,
+        "mmgbsa_gb_mean_kcal": 107.9956,
+        "mmgbsa_np_mean_kcal": -20.3635,
+        "mmgbsa_dg_mean_kcal": -61.5283,
+        "ash_binding_score_kcal": -56.7316,
+        "mbar_funnel_dg_kcal": -187.9847,
+        "lambda_schedule": [
+          1.0,
+          0.93,
+          0.86,
+          0.78
+        ],
+        "swap_acceptance_rates": [
+          0.5,
+          0.0,
+          0.0
+        ],
+        "verdict": "stable_bound",
+        "aggregate_ns_per_day": 5.79
+      },
+      {
+        "pdb": "1BE9",
+        "system": "PSD-95 PDZ3–CRIPT 肽",
+        "quality": "measured",
+        "kd_M": 2e-06,
+        "kd_source": "Toto 2016 / Chi 2006, ~1-3 μM",
+        "dg_exp_kcal": -7.77,
+        "dg_bind_pred_mean_kcal": -8.5446,
+        "error_pred_minus_exp_kcal": -0.7746,
+        "abs_error_kcal": 0.7746,
+        "atoms": 1965,
+        "retained_ions": 0,
+        "provenance_notes": [
+          "Reconstructed missing heavy atoms on A:PHE301: ['CD1', 'CD2', 'CE1', 'CE2', 'CG', 'CZ']",
+          "Reconstructed missing heavy atoms on A:ASP332: ['CG', 'OD1', 'OD2']",
+          "Reconstructed missing heavy atoms on B:LYS5: ['CD', 'CE', 'CG', 'NZ']"
+        ],
+        "ligand_rmsd_mean_a": 0.7841,
+        "q_native_mean": 0.9172,
+        "hbond_count_mean": 9.25,
+        "neutral_hbond_count_mean": 6.25,
+        "buried_sasa_mean_a2": 895.31,
+        "cav_sasa_mean_kcal": -6.4462,
+        "pol_eps4_mean_kcal": 2.7945,
+        "conf_entropy_mean_kcal": 2.7028,
+        "mmgbsa_vdw_mean_kcal": -40.9085,
+        "mmgbsa_elec_mean_kcal": -153.9332,
+        "mmgbsa_gb_mean_kcal": 162.3509,
+        "mmgbsa_np_mean_kcal": -10.7713,
+        "mmgbsa_dg_mean_kcal": -43.2621,
+        "ash_binding_score_kcal": -36.6957,
+        "mbar_funnel_dg_kcal": -150.712,
+        "lambda_schedule": [
+          1.0,
+          0.93,
+          0.86,
+          0.78
+        ],
+        "swap_acceptance_rates": [
+          0.0,
+          1.0,
+          0.5
+        ],
+        "verdict": "stable_bound",
+        "aggregate_ns_per_day": 8.98
+      },
+      {
+        "pdb": "1N7F",
+        "system": "GRIP1 PDZ6–liprin C 端肽",
+        "quality": "family",
+        "kd_M": 1e-05,
+        "kd_source": "PDZ 典型 ~1-20 μM（量级估计）",
+        "dg_exp_kcal": -6.82,
+        "dg_bind_pred_mean_kcal": -7.7481,
+        "error_pred_minus_exp_kcal": -0.9281,
+        "abs_error_kcal": 0.9281,
+        "atoms": 1602,
+        "retained_ions": 0,
+        "provenance_notes": [],
+        "ligand_rmsd_mean_a": 0.9838,
+        "q_native_mean": 0.9247,
+        "hbond_count_mean": 7.0,
+        "neutral_hbond_count_mean": 4.25,
+        "buried_sasa_mean_a2": 984.39,
+        "cav_sasa_mean_kcal": -7.0876,
+        "pol_eps4_mean_kcal": 2.7526,
+        "conf_entropy_mean_kcal": 2.7765,
+        "mmgbsa_vdw_mean_kcal": -44.7073,
+        "mmgbsa_elec_mean_kcal": -86.8064,
+        "mmgbsa_gb_mean_kcal": 94.2541,
+        "mmgbsa_np_mean_kcal": -11.7559,
+        "mmgbsa_dg_mean_kcal": -49.0155,
+        "ash_binding_score_kcal": -46.2668,
+        "mbar_funnel_dg_kcal": -138.6072,
+        "lambda_schedule": [
+          1.0,
+          0.93,
+          0.86,
+          0.78
+        ],
+        "swap_acceptance_rates": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "verdict": "stable_bound",
+        "aggregate_ns_per_day": 12.96
+      },
+      {
+        "pdb": "2I0L",
+        "system": "Sap97 PDZ2–HPV18 E6 肽",
+        "quality": "family",
+        "kd_M": 2e-05,
+        "kd_source": "PDZ-E6 ~10-40 μM（量级估计）",
+        "dg_exp_kcal": -6.41,
+        "dg_bind_pred_mean_kcal": -7.6788,
+        "error_pred_minus_exp_kcal": -1.2688,
+        "abs_error_kcal": 1.2688,
+        "atoms": 1511,
+        "retained_ions": 0,
+        "provenance_notes": [
+          "Reconstructed missing heavy atoms on A:ILE353: ['CD1', 'CG1', 'CG2']",
+          "Reconstructed missing heavy atoms on A:GLU380: ['CD', 'CG', 'OE1', 'OE2']",
+          "Reconstructed missing heavy atoms on C:ARG2001: ['CD', 'CG', 'CZ', 'NE', 'NH1', 'NH2']"
+        ],
+        "ligand_rmsd_mean_a": 0.8994,
+        "q_native_mean": 0.86,
+        "hbond_count_mean": 8.25,
+        "neutral_hbond_count_mean": 5.5,
+        "buried_sasa_mean_a2": 1042.25,
+        "cav_sasa_mean_kcal": -7.5042,
+        "pol_eps4_mean_kcal": 4.0648,
+        "conf_entropy_mean_kcal": 3.4135,
+        "mmgbsa_vdw_mean_kcal": -47.0717,
+        "mmgbsa_elec_mean_kcal": -143.0539,
+        "mmgbsa_gb_mean_kcal": 154.0432,
+        "mmgbsa_np_mean_kcal": -11.6199,
+        "mmgbsa_dg_mean_kcal": -47.7023,
+        "ash_binding_score_kcal": -47.0125,
+        "mbar_funnel_dg_kcal": -153.9792,
+        "lambda_schedule": [
+          1.0,
+          0.93,
+          0.86,
+          0.78
+        ],
+        "swap_acceptance_rates": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "verdict": "stable_bound",
+        "aggregate_ns_per_day": 13.98
+      },
+      {
+        "pdb": "1QJA",
+        "system": "14-3-3 ζ–磷酸肽 (mode 2)",
+        "quality": "family",
+        "kd_M": 3e-06,
+        "kd_source": "单磷酸化 motif 1-10 μM (Yaffe 1997)",
+        "dg_exp_kcal": -7.44,
+        "dg_bind_pred_mean_kcal": -7.8146,
+        "error_pred_minus_exp_kcal": -0.3746,
+        "abs_error_kcal": 0.3746,
+        "atoms": 3912,
+        "retained_ions": 0,
+        "provenance_notes": [
+          "Treated gap B:133->138 (4.22 A) as chain termini."
+        ],
+        "ligand_rmsd_mean_a": 0.9324,
+        "q_native_mean": 0.9467,
+        "hbond_count_mean": 11.75,
+        "neutral_hbond_count_mean": 4.25,
+        "buried_sasa_mean_a2": 1313.72,
+        "cav_sasa_mean_kcal": -9.4588,
+        "pol_eps4_mean_kcal": 2.2919,
+        "conf_entropy_mean_kcal": 5.0165,
+        "mmgbsa_vdw_mean_kcal": -59.2934,
+        "mmgbsa_elec_mean_kcal": -102.3871,
+        "mmgbsa_gb_mean_kcal": 110.5624,
+        "mmgbsa_np_mean_kcal": -15.7567,
+        "mmgbsa_dg_mean_kcal": -66.8748,
+        "ash_binding_score_kcal": -62.4753,
+        "mbar_funnel_dg_kcal": -308.5312,
+        "lambda_schedule": [
+          1.0,
+          0.9541,
+          0.9082,
+          0.8623
+        ],
+        "swap_acceptance_rates": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "verdict": "stable_bound",
+        "aggregate_ns_per_day": 3.1
+      },
+      {
+        "pdb": "1JYR",
+        "system": "Grb2 SH2–pY 肽",
+        "quality": "family",
+        "kd_M": 1e-06,
+        "kd_source": "简单 pY 肽 1-10 μM (Ogura 2008)",
+        "dg_exp_kcal": -8.18,
+        "dg_bind_pred_mean_kcal": -7.383,
+        "error_pred_minus_exp_kcal": 0.797,
+        "abs_error_kcal": 0.797,
+        "atoms": 1835,
+        "retained_ions": 0,
+        "provenance_notes": [],
+        "ligand_rmsd_mean_a": 0.9816,
+        "q_native_mean": 0.9307,
+        "hbond_count_mean": 11.75,
+        "neutral_hbond_count_mean": 5.0,
+        "buried_sasa_mean_a2": 945.94,
+        "cav_sasa_mean_kcal": -6.8107,
+        "pol_eps4_mean_kcal": 0.2603,
+        "conf_entropy_mean_kcal": 3.2882,
+        "mmgbsa_vdw_mean_kcal": -47.5099,
+        "mmgbsa_elec_mean_kcal": -209.4742,
+        "mmgbsa_gb_mean_kcal": 213.9155,
+        "mmgbsa_np_mean_kcal": -12.2392,
+        "mmgbsa_dg_mean_kcal": -55.3078,
+        "ash_binding_score_kcal": -48.8649,
+        "mbar_funnel_dg_kcal": -274.8773,
+        "lambda_schedule": [
+          1.0,
+          0.9564,
+          0.9127,
+          0.869
+        ],
+        "swap_acceptance_rates": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "verdict": "stable_bound",
+        "aggregate_ns_per_day": 9.56
+      },
+      {
+        "pdb": "1G3F",
+        "system": "XIAP BIR3–Smac AVPI",
+        "quality": "measured",
+        "kd_M": 5e-07,
+        "kd_source": "Bolognesi 2009 / Sun 2007, 0.4-0.7 μM",
+        "dg_exp_kcal": -8.59,
+        "dg_bind_pred_mean_kcal": -5.2504,
+        "error_pred_minus_exp_kcal": 3.3396,
+        "abs_error_kcal": 3.3396,
+        "atoms": 2111,
+        "retained_ions": 1,
+        "provenance_notes": [
+          "Applied crystallographic inner-sphere harmonic Zn2+ coordination restraints (k=85.0 kcal/mol/A^2) on 4 protein donor bonds (fixed-charge non-ZAFF model)."
+        ],
+        "ligand_rmsd_mean_a": 1.0887,
+        "q_native_mean": 0.8341,
+        "hbond_count_mean": 3.25,
+        "neutral_hbond_count_mean": 3.25,
+        "buried_sasa_mean_a2": 680.23,
+        "cav_sasa_mean_kcal": -4.8976,
+        "pol_eps4_mean_kcal": 4.9514,
+        "conf_entropy_mean_kcal": 1.5298,
+        "mmgbsa_vdw_mean_kcal": -27.4618,
+        "mmgbsa_elec_mean_kcal": -50.5575,
+        "mmgbsa_gb_mean_kcal": 61.5809,
+        "mmgbsa_np_mean_kcal": -8.3132,
+        "mmgbsa_dg_mean_kcal": -24.7516,
+        "ash_binding_score_kcal": -24.3803,
+        "mbar_funnel_dg_kcal": -52.5669,
+        "lambda_schedule": [
+          1.0,
+          0.93,
+          0.86,
+          0.78
+        ],
+        "swap_acceptance_rates": [
+          1.0,
+          0.0,
+          0.5
+        ],
+        "verdict": "stable_bound",
+        "aggregate_ns_per_day": 10.55
+      }
+    ]
+  },
+  "criterion1_decoy_discrimination": {
+    "class_a_pairwise_accuracy": 1.0,
+    "class_b_pairwise_accuracy": 1.0,
+    "pose_verdict_accuracy": 1.0,
+    "pose_decoys": [
+      {
+        "pdb": "1YCR",
+        "system": "MDM2 - p53(15-29)",
+        "atoms": 1814,
+        "native": {
+          "ligand_rmsd_mean_a": 0.7562,
+          "q_native_mean": 0.8386,
+          "hbond_count_mean": 3.25,
+          "neutral_hbond_count_mean": 2.0,
+          "buried_sasa_mean_a2": 1606.93,
+          "dg_bind_pred_mean_kcal": -8.2492,
+          "mmgbsa_dg_mean_kcal": -73.907,
+          "ash_binding_score_kcal": -69.7087,
+          "mbar_funnel_dg_kcal": -167.8931,
+          "mbar_f_states": [
+            0.0,
+            20.838,
+            39.957,
+            59.93
+          ],
+          "lambda_schedule": [
+            1.0,
+            0.93,
+            0.86,
+            0.78
+          ],
+          "swap_acceptance_rates": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "verdict": "stable_bound",
+          "aggregate_ns_per_day": 9.5
+        },
+        "decoy_180": {
+          "ligand_rmsd_mean_a": 1.0706,
+          "q_native_mean": 0.8542,
+          "hbond_count_mean": 0.0,
+          "neutral_hbond_count_mean": 0.0,
+          "buried_sasa_mean_a2": 171.55,
+          "dg_bind_pred_mean_kcal": 2.029,
+          "mmgbsa_dg_mean_kcal": -2.794,
+          "ash_binding_score_kcal": -1.9861,
+          "mbar_funnel_dg_kcal": -6.2293,
+          "mbar_f_states": [
+            0.0,
+            1.557,
+            2.451,
+            2.224
+          ],
+          "lambda_schedule": [
+            1.0,
+            0.93,
+            0.86,
+            0.78
+          ],
+          "swap_acceptance_rates": [
+            0.0,
+            0.0,
+            0.5
+          ],
+          "verdict": "unstable_decoy",
+          "aggregate_ns_per_day": 12.01
+        },
+        "decoy_axial_shift": {
+          "ligand_rmsd_mean_a": 0.9083,
+          "q_native_mean": 0.6406,
+          "hbond_count_mean": 0.5,
+          "neutral_hbond_count_mean": 0.25,
+          "buried_sasa_mean_a2": 268.03,
+          "dg_bind_pred_mean_kcal": 1.0354,
+          "mmgbsa_dg_mean_kcal": -6.2115,
+          "ash_binding_score_kcal": -5.4552,
+          "mbar_funnel_dg_kcal": -31.8907,
+          "mbar_f_states": [
+            0.0,
+            4.682,
+            8.407,
+            11.383
+          ],
+          "lambda_schedule": [
+            1.0,
+            0.93,
+            0.86,
+            0.78
+          ],
+          "swap_acceptance_rates": [
+            0.5,
+            0.0,
+            1.0
+          ],
+          "verdict": "unstable_decoy",
+          "aggregate_ns_per_day": 10.39
+        },
+        "ddg_class_a_kcal": 10.278,
+        "ddg_class_b_kcal": 9.285,
+        "score_margin_kcal": 67.723,
+        "score_margin_class_b_kcal": 64.253
+      },
+      {
+        "pdb": "1G3F",
+        "system": "XIAP BIR3(Zn) - Smac AVPI",
+        "atoms": 2111,
+        "native": {
+          "ligand_rmsd_mean_a": 1.0887,
+          "q_native_mean": 0.8341,
+          "hbond_count_mean": 3.25,
+          "neutral_hbond_count_mean": 3.25,
+          "buried_sasa_mean_a2": 680.23,
+          "dg_bind_pred_mean_kcal": -5.2504,
+          "mmgbsa_dg_mean_kcal": -24.7516,
+          "ash_binding_score_kcal": -24.3803,
+          "mbar_funnel_dg_kcal": -52.5669,
+          "mbar_f_states": [
+            0.0,
+            6.905,
+            12.877,
+            18.764
+          ],
+          "lambda_schedule": [
+            1.0,
+            0.93,
+            0.86,
+            0.78
+          ],
+          "swap_acceptance_rates": [
+            1.0,
+            0.0,
+            0.5
+          ],
+          "verdict": "stable_bound",
+          "aggregate_ns_per_day": 10.55
+        },
+        "decoy_180": {
+          "ligand_rmsd_mean_a": 1.0754,
+          "q_native_mean": 0.7596,
+          "hbond_count_mean": 1.0,
+          "neutral_hbond_count_mean": 1.0,
+          "buried_sasa_mean_a2": 339.47,
+          "dg_bind_pred_mean_kcal": 2.5823,
+          "mmgbsa_dg_mean_kcal": 1.74,
+          "ash_binding_score_kcal": 4.238,
+          "mbar_funnel_dg_kcal": 14.5555,
+          "mbar_f_states": [
+            0.0,
+            -1.015,
+            -2.6,
+            -5.196
+          ],
+          "lambda_schedule": [
+            1.0,
+            0.93,
+            0.86,
+            0.78
+          ],
+          "swap_acceptance_rates": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "verdict": "unstable_decoy",
+          "aggregate_ns_per_day": 9.55
+        },
+        "decoy_axial_shift": {
+          "ligand_rmsd_mean_a": 1.0066,
+          "q_native_mean": 0.4868,
+          "hbond_count_mean": 0.0,
+          "neutral_hbond_count_mean": 0.0,
+          "buried_sasa_mean_a2": 269.49,
+          "dg_bind_pred_mean_kcal": 1.1076,
+          "mmgbsa_dg_mean_kcal": -5.0788,
+          "ash_binding_score_kcal": -4.8395,
+          "mbar_funnel_dg_kcal": -6.8236,
+          "mbar_f_states": [
+            0.0,
+            1.251,
+            2.025,
+            2.436
+          ],
+          "lambda_schedule": [
+            1.0,
+            0.93,
+            0.86,
+            0.78
+          ],
+          "swap_acceptance_rates": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "verdict": "unstable_decoy",
+          "aggregate_ns_per_day": 10.34
+        },
+        "ddg_class_a_kcal": 7.833,
+        "ddg_class_b_kcal": 6.358,
+        "score_margin_kcal": 28.618,
+        "score_margin_class_b_kcal": 19.541
+      },
+      {
+        "pdb": "1N7F",
+        "system": "GRIP1 PDZ6 - liprin C-term",
+        "atoms": 1602,
+        "native": {
+          "ligand_rmsd_mean_a": 0.9838,
+          "q_native_mean": 0.9247,
+          "hbond_count_mean": 7.0,
+          "neutral_hbond_count_mean": 4.25,
+          "buried_sasa_mean_a2": 984.39,
+          "dg_bind_pred_mean_kcal": -7.7481,
+          "mmgbsa_dg_mean_kcal": -49.0155,
+          "ash_binding_score_kcal": -46.2668,
+          "mbar_funnel_dg_kcal": -138.6072,
+          "mbar_f_states": [
+            0.0,
+            16.636,
+            32.528,
+            49.476
+          ],
+          "lambda_schedule": [
+            1.0,
+            0.93,
+            0.86,
+            0.78
+          ],
+          "swap_acceptance_rates": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "verdict": "stable_bound",
+          "aggregate_ns_per_day": 12.96
+        },
+        "decoy_180": {
+          "ligand_rmsd_mean_a": 1.0472,
+          "q_native_mean": 0.9224,
+          "hbond_count_mean": 1.5,
+          "neutral_hbond_count_mean": 0.0,
+          "buried_sasa_mean_a2": 154.38,
+          "dg_bind_pred_mean_kcal": 1.2263,
+          "mmgbsa_dg_mean_kcal": -4.3338,
+          "ash_binding_score_kcal": -3.025,
+          "mbar_funnel_dg_kcal": -25.8405,
+          "mbar_f_states": [
+            0.0,
+            3.48,
+            6.454,
+            9.224
+          ],
+          "lambda_schedule": [
+            1.0,
+            0.93,
+            0.86,
+            0.78
+          ],
+          "swap_acceptance_rates": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "verdict": "unstable_decoy",
+          "aggregate_ns_per_day": 15.64
+        },
+        "decoy_axial_shift": {
+          "ligand_rmsd_mean_a": 0.8858,
+          "q_native_mean": 0.825,
+          "hbond_count_mean": 0.25,
+          "neutral_hbond_count_mean": 0.0,
+          "buried_sasa_mean_a2": 122.51,
+          "dg_bind_pred_mean_kcal": 1.8602,
+          "mmgbsa_dg_mean_kcal": -2.4245,
+          "ash_binding_score_kcal": -2.3539,
+          "mbar_funnel_dg_kcal": -40.0998,
+          "mbar_f_states": [
+            0.0,
+            5.3,
+            9.92,
+            14.314
+          ],
+          "lambda_schedule": [
+            1.0,
+            0.93,
+            0.86,
+            0.78
+          ],
+          "swap_acceptance_rates": [
+            1.0,
+            1.0,
+            0.5
+          ],
+          "verdict": "unstable_decoy",
+          "aggregate_ns_per_day": 12.78
+        },
+        "ddg_class_a_kcal": 8.974,
+        "ddg_class_b_kcal": 9.608,
+        "score_margin_kcal": 43.242,
+        "score_margin_class_b_kcal": 43.913
+      },
+      {
+        "pdb": "1BXL",
+        "system": "Bcl-xL - Bak BH3",
+        "atoms": 3223,
+        "native": {
+          "ligand_rmsd_mean_a": 0.9667,
+          "q_native_mean": 0.7272,
+          "hbond_count_mean": 2.25,
+          "neutral_hbond_count_mean": 0.0,
+          "buried_sasa_mean_a2": 1920.92,
+          "dg_bind_pred_mean_kcal": -5.164,
+          "mmgbsa_dg_mean_kcal": -61.5283,
+          "ash_binding_score_kcal": -56.7316,
+          "mbar_funnel_dg_kcal": -187.9847,
+          "mbar_f_states": [
+            0.0,
+            26.275,
+            46.912,
+            67.101
+          ],
+          "lambda_schedule": [
+            1.0,
+            0.93,
+            0.86,
+            0.78
+          ],
+          "swap_acceptance_rates": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "verdict": "stable_bound",
+          "aggregate_ns_per_day": 5.79
+        },
+        "decoy_180": {
+          "ligand_rmsd_mean_a": 1.105,
+          "q_native_mean": 0.86,
+          "hbond_count_mean": 1.25,
+          "neutral_hbond_count_mean": 0.5,
+          "buried_sasa_mean_a2": 628.8,
+          "dg_bind_pred_mean_kcal": 0.7969,
+          "mmgbsa_dg_mean_kcal": -13.0219,
+          "ash_binding_score_kcal": -12.4695,
+          "mbar_funnel_dg_kcal": -96.3171,
+          "mbar_f_states": [
+            0.0,
+            12.77,
+            23.84,
+            34.38
+          ],
+          "lambda_schedule": [
+            1.0,
+            0.93,
+            0.86,
+            0.78
+          ],
+          "swap_acceptance_rates": [
+            0.0,
+            1.0,
+            0.5
+          ],
+          "verdict": "unstable_decoy",
+          "aggregate_ns_per_day": 6.78
+        },
+        "decoy_axial_shift": {
+          "ligand_rmsd_mean_a": 0.8263,
+          "q_native_mean": 0.675,
+          "hbond_count_mean": 0.0,
+          "neutral_hbond_count_mean": 0.0,
+          "buried_sasa_mean_a2": 112.2,
+          "dg_bind_pred_mean_kcal": 2.3656,
+          "mmgbsa_dg_mean_kcal": -2.6922,
+          "ash_binding_score_kcal": -2.6755,
+          "mbar_funnel_dg_kcal": -42.5364,
+          "mbar_f_states": [
+            0.0,
+            6.36,
+            11.199,
+            15.183
+          ],
+          "lambda_schedule": [
+            1.0,
+            0.93,
+            0.86,
+            0.78
+          ],
+          "swap_acceptance_rates": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "verdict": "unstable_decoy",
+          "aggregate_ns_per_day": 7.74
+        },
+        "ddg_class_a_kcal": 5.961,
+        "ddg_class_b_kcal": 7.53,
+        "score_margin_kcal": 44.262,
+        "score_margin_class_b_kcal": 54.056
+      }
+    ],
+    "hotspot_alanine_mutants": [
+      {
+        "pdb": "1YCR",
+        "mutation": "p53 F19A/W23A/L26A",
+        "initial_backbone_rmsd_a": 0.0,
+        "wt_dg_bind_pred_kcal": -8.2492,
+        "mut_dg_bind_pred_kcal": -6.3874,
+        "ddg_mut_minus_wt_kcal": 1.862,
+        "wt_ash_score_kcal": -69.7087,
+        "mut_ash_score_kcal": -47.5945,
+        "dscore_mut_minus_wt_kcal": 22.114,
+        "wt_verdict": "stable_bound",
+        "mut_verdict": "stable_bound",
+        "mut_ligand_rmsd_mean_a": 0.8898
+      },
+      {
+        "pdb": "1G3F",
+        "mutation": "Smac V902A/P903A/I904A",
+        "initial_backbone_rmsd_a": 0.0,
+        "wt_dg_bind_pred_kcal": -5.2504,
+        "mut_dg_bind_pred_kcal": -2.7317,
+        "ddg_mut_minus_wt_kcal": 2.519,
+        "wt_ash_score_kcal": -24.3803,
+        "mut_ash_score_kcal": -14.5902,
+        "dscore_mut_minus_wt_kcal": 9.79,
+        "wt_verdict": "stable_bound",
+        "mut_verdict": "unstable_decoy",
+        "mut_ligand_rmsd_mean_a": 1.028
+      },
+      {
+        "pdb": "1BXL",
+        "mutation": "Bak BH3 V574A/L578A/I581A/I585A",
+        "initial_backbone_rmsd_a": 0.0,
+        "wt_dg_bind_pred_kcal": -5.164,
+        "mut_dg_bind_pred_kcal": -5.1601,
+        "ddg_mut_minus_wt_kcal": 0.004,
+        "wt_ash_score_kcal": -56.7316,
+        "mut_ash_score_kcal": -45.5007,
+        "dscore_mut_minus_wt_kcal": 11.231,
+        "wt_verdict": "stable_bound",
+        "mut_verdict": "stable_bound",
+        "mut_ligand_rmsd_mean_a": 0.9726
+      },
+      {
+        "pdb": "2FLU",
+        "mutation": "Nrf2 E79A/T80A/E82A",
+        "initial_backbone_rmsd_a": 0.0,
+        "wt_dg_bind_pred_kcal": -7.7692,
+        "mut_dg_bind_pred_kcal": -3.5394,
+        "ddg_mut_minus_wt_kcal": 4.23,
+        "wt_ash_score_kcal": -54.4219,
+        "mut_ash_score_kcal": -35.8688,
+        "dscore_mut_minus_wt_kcal": 18.553,
+        "wt_verdict": "stable_bound",
+        "mut_verdict": "metastable_rearranged",
+        "mut_ligand_rmsd_mean_a": 0.7389
+      },
+      {
+        "pdb": "1JYR",
+        "mutation": "Grb2 SH2 PTR1003A/N1005A",
+        "initial_backbone_rmsd_a": 0.0,
+        "wt_dg_bind_pred_kcal": -7.383,
+        "mut_dg_bind_pred_kcal": -2.6046,
+        "ddg_mut_minus_wt_kcal": 4.778,
+        "wt_ash_score_kcal": -48.8649,
+        "mut_ash_score_kcal": -22.9368,
+        "dscore_mut_minus_wt_kcal": 25.928,
+        "wt_verdict": "stable_bound",
+        "mut_verdict": "unstable_decoy",
+        "mut_ligand_rmsd_mean_a": 0.9925
+      },
+      {
+        "pdb": "1QJA",
+        "mutation": "14-3-3 Y5A/SEP7A",
+        "initial_backbone_rmsd_a": 0.0,
+        "wt_dg_bind_pred_kcal": -7.8146,
+        "mut_dg_bind_pred_kcal": -3.4275,
+        "ddg_mut_minus_wt_kcal": 4.387,
+        "wt_ash_score_kcal": -62.4753,
+        "mut_ash_score_kcal": -33.9556,
+        "dscore_mut_minus_wt_kcal": 28.52,
+        "wt_verdict": "stable_bound",
+        "mut_verdict": "metastable_rearranged",
+        "mut_ligand_rmsd_mean_a": 0.7877
+      },
+      {
+        "pdb": "1N7F",
+        "mutation": "liprin Y6A/C8A",
+        "initial_backbone_rmsd_a": 0.0,
+        "wt_dg_bind_pred_kcal": -7.7481,
+        "mut_dg_bind_pred_kcal": -6.9674,
+        "ddg_mut_minus_wt_kcal": 0.781,
+        "wt_ash_score_kcal": -46.2668,
+        "mut_ash_score_kcal": -37.2759,
+        "dscore_mut_minus_wt_kcal": 8.991,
+        "wt_verdict": "stable_bound",
+        "mut_verdict": "stable_bound",
+        "mut_ligand_rmsd_mean_a": 0.8592
+      },
+      {
+        "pdb": "1BE9",
+        "mutation": "CRIPT T7A/V9A",
+        "initial_backbone_rmsd_a": 0.0,
+        "wt_dg_bind_pred_kcal": -8.5446,
+        "mut_dg_bind_pred_kcal": -6.6678,
+        "ddg_mut_minus_wt_kcal": 1.877,
+        "wt_ash_score_kcal": -36.6957,
+        "mut_ash_score_kcal": -30.7112,
+        "dscore_mut_minus_wt_kcal": 5.985,
+        "wt_verdict": "stable_bound",
+        "mut_verdict": "stable_bound",
+        "mut_ligand_rmsd_mean_a": 0.8124
+      }
+    ],
+    "class_c_alanine_mutant_score_accuracy": 1.0,
+    "class_c_alanine_mutant_ddg_accuracy": 0.875,
+    "class_c_alanine_mutant_overall_accuracy": 1.0
+  },
+  "resources": {
+    "total_benchmark_wall_seconds": 819.03,
+    "peak_rss_mb": 908.0
+  }
+}
